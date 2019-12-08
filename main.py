@@ -42,7 +42,7 @@ def output():
 		        lineNum += 1
 		        if len(lineText) > 0:
 		            txtNum += 1
-		            es.index(index=author, id=txtNum, body = {'lineNum': lineNum,'text': lineText})
+		            es.index(index="books", id=txtNum, body = {'lineNum': lineNum,'text': lineText})
 		except UnicodeDecodeError as e:
 		    print("Decode error at: " + str(lineNum) + ':' + str(txtNum))
 		    print(e)
